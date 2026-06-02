@@ -164,6 +164,7 @@ export default function Hero({ currentLang }: HeroProps) {
           </div>
 
           {/* Right Block: Owner Ramdev Choudhary Sir Image */}
+          {/* Right Block: Owner Ramdev Choudhary Sir Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -205,7 +206,8 @@ export default function Hero({ currentLang }: HeroProps) {
                 </div>
               </div>
 
-              <div className="absolute top-4 -right-4 bg-gradient-to-r from-military-900 via-military-800 to-military-700 border-2 border-bronze-400 px-3.5 py-2.5 rounded-xl shadow-lg flex items-center gap-2.5">
+              {/* FIX: Mobile पर इसे नीचे (relative) और Desktop पर ऊपर (absolute) रखा है */}
+              <div className="mt-6 lg:mt-0 lg:absolute lg:top-4 lg:-right-4 bg-gradient-to-r from-military-900 via-military-800 to-military-700 border-2 border-bronze-400 px-3.5 py-2.5 rounded-xl shadow-lg flex items-center gap-2.5">
                 <div className="w-10 h-10 rounded-full bg-saffron-500 flex items-center justify-center text-white font-bold text-xs shadow-inner">
                   80%
                 </div>
