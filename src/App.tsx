@@ -45,50 +45,7 @@ export default function App() {
 
       </div>
 
-      {/* Structured bilingual Toast Alert on load */}
-      <AnimatePresence>
-        {showToast && (
-          <div className="fixed bottom-6 left-6 z-40 max-w-sm w-full block">
-            <motion.div
-              initial={{ opacity: 0, shadow: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -30 }}
-              className="bg-military-850 hover:bg-military-800 border-2 border-[#dfb56c]/30 rounded-xl p-4 shadow-2xl relative overflow-hidden"
-            >
-              {/* Back strip indicator of patriotism */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808]" />
-              
-              <div className="flex items-start gap-3 mt-1.5">
-                <span className="text-xl">🏆</span>
-                <div className="space-y-1">
-                  <h4 className="font-display font-extrabold text-[11px] text-white uppercase tracking-wider">
-                    {currentLang === 'en' ? 'Admission Helpline Malpura' : 'कुचामन जीत हेल्पलाइन मालपुरा'}
-                  </h4>
-                  <p className="text-[11.5px] text-gray-300 leading-normal">
-                    {currentLang === 'en' 
-                      ? 'Admissions for regular physical, hostel residency & Agniveer written coaching are fully open.'
-                      : 'भौतिक प्रशिक्षण (दौड़), उत्कृष्ट हॉस्टल एवं लिखित परीक्षा बैच के रजिस्ट्रेशन चालू हैं।'}
-                  </p>
-                  <p className="text-[10px] font-mono text-bronze-400 font-bold">
-                    📞 Admin Desk: +91 8233809848
-                  </p>
-                </div>
-              </div>
-
-              {/* Dismiss Button */}
-              <button
-                onClick={() => setShowToast(false)}
-                className="absolute top-2.5 right-2.5 text-xs text-gray-500 hover:text-white font-black p-1 transition-colors block cursor-pointer"
-                title="Dismiss"
-              >
-                ✕
-              </button>
-
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-
+     
       {/* Assembly of Modular High-End Patriotic Layout */}
       <Navbar currentLang={currentLang} setCurrentLang={setCurrentLang} />
       
