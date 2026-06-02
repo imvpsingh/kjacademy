@@ -21,11 +21,11 @@ export default function Navbar({ currentLang, setCurrentLang }: NavbarProps) {
 
   const navLinks = [
     { nameEn: 'Home', nameHn: 'मुख्य पृष्ठ', href: '#home' },
-    { nameEn: 'About Academy', nameHn: 'अकादमी के बारे में', href: '#about' },
-    { nameEn: 'Courses & Training', nameHn: 'कोर्सेज व ट्रेनिंग', href: '#services' },
-    { nameEn: 'Eligibility Checker', nameHn: 'योग्यता जांचें', href: '#eligibility' },
-    { nameEn: 'Toppers & Gallery', nameHn: 'चयनित व गैलरी', href: '#gallery' },
-    { nameEn: 'Contact Us', nameHn: 'संपर्क करें', href: '#contact' },
+    { nameEn: 'About', nameHn: 'अकादमी के बारे में', href: '#about' },
+    { nameEn: 'Training', nameHn: 'ट्रेनिंग', href: '#services' },
+    { nameEn: 'Eligibility', nameHn: 'योग्यता जांचें', href: '#eligibility' },
+    { nameEn: 'Gallery', nameHn: 'गैलरी', href: '#gallery' },
+    { nameEn: 'Contact', nameHn: 'संपर्क', href: '#contact' },
   ];
 
   const handleScrollToSegment = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -49,13 +49,16 @@ export default function Navbar({ currentLang, setCurrentLang }: NavbarProps) {
       <nav className={`fixed left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'top-0 bg-military-900/95 backdrop-blur-md shadow-lg border-b border-bronze-500/20 py-2' : 'top-8 md:top-8 bg-transparent py-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
+            {/* Logo Image */}
             <a href="#home" onClick={(e) => handleScrollToSegment(e, '#home')} className="flex items-center gap-3 group">
-              <div className="relative flex items-center justify-center w-11 h-11 bg-gradient-to-b from-saffron-500 to-military-500 text-military-900 rounded-full border border-bronze-400">
-                <Shield className="w-6 h-6 text-military-900" />
-              </div>
+              <img 
+                src="assets/logo.png" 
+                alt="Logo" 
+                className="w-12 h-12 object-contain" 
+              />
               <div className="flex flex-col">
-                <span className="font-display font-extrabold text-lg text-white uppercase">{currentLang === 'en' ? 'KJ DEFENCE' : 'कुचामन जीत'}</span>
-                <span className="text-[10px] font-bold text-bronze-300 uppercase">{currentLang === 'en' ? 'ACADEMY MALPURA' : 'डिफेंस एकेडमी'}</span>
+                <span className="font-display font-extrabold text-lg text-white uppercase">{currentLang === 'en' ? 'KJ' : 'कुचामन जीत'}</span>
+                <span className="text-[10px] font-bold text-bronze-300 uppercase">{currentLang === 'en' ? 'Difence ACADEMY' : 'डिफेंस एकेडमी'}</span>
               </div>
             </a>
 
