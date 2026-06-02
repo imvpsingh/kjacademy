@@ -1,0 +1,6 @@
+{
+  "name": "KJ Defence Academy",
+  "description": "Premium patriotic training academy (Kuchaman Jeet Academy) for Indian Army, Agniveer, physical & academic excellence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+
+  /* Premium Patriotic Indian Army Theme Palette */
+  --color-saffron-50: #fffaf0;
+  --color-saffron-500: #e06600; /* Sophisticated muted saffron */
+  --color-saffron-600: #c15100;
+  --color-saffron-700: #9e3d00;
+  
+  --color-military-50: #f4f6f4;
+  --color-military-900: #101c13; /* Deep elite dark green */
+  --color-military-800: #14281b; /* Outer cards */
+  --color-military-700: #1b3524;
+  --color-military-600: #264a33;
+  --color-military-500: #336143; /* Medium vibrant military green */
+  
+  --color-bronze-300: #edd1a1;
+  --color-bronze-400: #dfb56c;
+  --color-bronze-500: #cb9c48; /* Premium military gold accent */
+
+  --color-patriotic-white: #fafbfc;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-military-900);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-military-700);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-saffron-500);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Glassmorphism Classes for Senior UI Feel */
+.glass-panel {
+  background: rgba(20, 40, 27, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(223, 181, 108, 0.15);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(24, 40, 30, 0.08);
+}
+
+/* Cinematic Saffron-Green gradient */
+.patriotic-glow {
+  background: linear-gradient(135deg, rgba(224, 102, 0, 0.15) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(51, 97, 67, 0.15) 100%);
+}
+
+.text-patriotic-gradient {
+  background: linear-gradient(135deg, var(--color-saffron-500) 0%, #ffffff 50%, var(--color-military-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
